@@ -1,0 +1,48 @@
+Next.js Benefits:
+1. Server rendering React apps
+2. Automatic code splitting
+3. Simple page based routing
+4. Built in CSS support for JSX
+5. Hot Reloading
+6. Deployment
+
+Installation:
+npm init-y 
+npm next react react-dom --save
+npm install isomorphic-unfetch
+   This is to use client and server side APIs
+in package.json add scripts such as 
+{
+    "scripts":{
+        "dev":"next",
+        "build":"next build",
+        "start":"next start"
+    }
+}
+
+pages/index.js
+export default() => <div>Hello World</div>
+
+For routing and Links
+import Link from 'next/link'
+
+<Link href="/"> <a> Home </a> </Link>
+<Link href="about"> <button> About </button> </Link>
+
+Style JSX
+
+<style jsx>{`
+    ul{
+        background:green,
+        color: blue
+    }
+
+`} </style>
+
+You can wrap every component in <Layout> and use props.children
+
+Head in Next.js
+import Head from 'next/head'
+
+With Next.js we dont need to import react or anything
+it already exists
